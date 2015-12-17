@@ -6,8 +6,19 @@ app.use(morgan('combined'));
 
 app.use(express.static('public'));
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
+app.get('/api/occurences/:word', function (req, res) {
+  var occurences = {};
+  var word = req.params.word;
+
+  word.split('').forEach(character => {
+    if (character in occurences) {
+      occurences[character] += 1;
+    } else {
+      occurences[character] = 1;
+    }
+  });
+
+  res.json(occurences);
 });
 
 var server = app.listen(3000, 'localhost', function () {
