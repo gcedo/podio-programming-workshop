@@ -1,3 +1,27 @@
 body {
-  color: red;
+  font-family: Helvetica;
+}
+
+.main {
+  width: 600px;
+  margin: 0 auto;
+}
+
+#word {
+  height: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.main > button {
+  height: 24px;
+  border-radius: 4px;
+  border: 1px solid steelblue;
+  background-color: steelblue;
+  color: white;
+  cursor: pointer;
+}
+
+.main > button:hover {
+  background-color: #2a75b2;
 }
