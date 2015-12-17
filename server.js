@@ -6,7 +6,7 @@ app.use(morgan('combined'));
 
 app.use(express.static('public'));
 
-app.get('/api/occurences/:word', function (req, res) {
+app.get('/api/occurrences/:word', function (req, res) {
   var occurences = {};
   var word = req.params.word;
 
