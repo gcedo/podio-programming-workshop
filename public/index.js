@@ -1,1 +1,5 @@
-console.log('Hello World!');
+function getOccurrences() {
+  console.log('Fetching occurrences');
+  var input = document.getElementById('word');
+  console.log(input.value);
+}
