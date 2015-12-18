@@ -10,7 +10,7 @@ app.get('/api/occurrences/:word', function (req, res) {
   var occurences = {};
   var word = req.params.word;
 
-  word.split('').forEach(character => {
+  word.split('').forEach(function(character) {
     if (character in occurences) {
       occurences[character] += 1;
     } else {
